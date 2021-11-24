@@ -6,7 +6,7 @@ Second app B
 
 http://localhost:5555
 
-to start to apps
+to start two apps
 
 1. `npm run initAll`
 2. `npm run dev`
