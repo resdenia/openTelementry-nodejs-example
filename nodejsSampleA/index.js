@@ -2,16 +2,17 @@ const fs = require("fs");
 const path = require("path");
 
 const express = require("express");
-const bodyParser = require("body-parser");
 
 const regularRoutes = require("./routes/main");
 
 const app = express();
+app.use("/public", express.static(__dirname + "/public"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded());
+app.use(express.json());
 
 app.use(regularRoutes);
 
-app.listen(process.env.PORT || 6000, () => {
+app.listen(process.env.PORT || 7777, () => {
 	console.log("listen port");
 });

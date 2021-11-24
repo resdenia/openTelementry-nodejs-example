@@ -1,10 +1,12 @@
 First app A
 
-http://localhost:6000
+http://localhost:7777
 
 Second app B
 
-http://localhost:5000
+http://localhost:5555
 
 to start to apps
-`npm run dev`
+
+1. `npm run initAll`
+2. `npm run dev`

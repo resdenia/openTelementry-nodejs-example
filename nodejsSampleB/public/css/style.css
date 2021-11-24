@@ -1,0 +1,44 @@
+body {
+	font-family: "Roboto", sans-serif;
+}
+.wrapper {
+	max-width: 400px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	border: 1px solid #dfdfdf;
+	border-radius: 5px;
+	padding: 30px 10px;
+	margin-top: 60px;
+	box-shadow: 0 4px 6px 0 rgb(1 45 65 / 20%);
+	background: #8ac6d1;
+	color: #fff;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	margin: auto;
+}
+
+form input {
+	margin-bottom: 20px;
+	height: 30px;
+}
+
+form label {
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+form button {
+	height: 30px;
+	background: #ffb6b9;
+	border: none;
+	width: 140px;
+	margin: auto;
+	border-radius: 5px;
+}

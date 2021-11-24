@@ -6,12 +6,35 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./public/css/style.css">
+
 </head>
 
 <body>
 
 
-	<h1>APP nodeJSsampleA localhost:6000</h1>
+
+	<div class="wrapper">
+		<div class="wrapper-title">
+			<h1>Application "A"</h1>
+			<p>Port: 7777</p>
+		</div>
+		<div class="wrapper-button">
+			<p>Send data please fill form to send Post reqeust to Application A</p>
+			<form action="/" method="post">
+				<label for="name">Your name</label>
+				<input type="text" id="name" name="name" />
+				<label for="age">Your age</label>
+				<input type="text" id="age" name="age" />
+				<input type="hidden" name="fromForm" value="form">
+				<button type="submit">Button</button>
+			</form>
+		</div>
+	</div>
+
 
 </body>
 
