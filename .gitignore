@@ -5,3 +5,6 @@ nodejsSampleB/node_modules
 
 /nodejsSampleA/node_modules
 /nodejsSampleB/node_modules
+
+otelcontribcol_darwin_amd64
+config.yaml

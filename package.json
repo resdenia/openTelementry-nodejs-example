@@ -6,11 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all --parallel devA devB",
-		"initA":"cd nodejsSampleA && npm install",
-		"initB":"cd nodejsSampleB && npm install",
-		"initAll":"npm-run-all --parallel initA initB",
-    "devB": "nodemon ./nodejsSampleB/index.js",
-    "devA": "nodemon ./nodejsSampleA/index.js"
+    "initA": "cd nodejsSampleA && npm install",
+    "initB": "cd nodejsSampleB && npm install",
+    "initApp": "npm install",
+    "initAll": "npm-run-all --parallel initApp initA initB",
+    "devB": "node --require './nodejsSampleB/tracer.js' ./nodejsSampleB/index.js",
+    "devA": "node --require './nodejsSampleA/tracer.js' ./nodejsSampleA/index.js",
+    "startTracer": " node --require './nodejsSampleA/tracer.js' ./nodejsSampleA/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +26,17 @@
   },
   "homepage": "https://github.com/resdenia/openTelementry-nodejs-example#readme",
   "dependencies": {
+    "@opentelemetry/api": "^1.0.3",
+    "@opentelemetry/auto-instrumentations-node": "^0.26.2",
+    "@opentelemetry/exporter-collector": "^0.25.0",
+    "@opentelemetry/instrumentation": "^0.27.0",
+    "@opentelemetry/resources": "^1.0.1",
+    "@opentelemetry/sdk-node": "^0.27.0",
+    "@opentelemetry/semantic-conventions": "^1.0.1",
+    "@opentelemetry/tracing": "^0.24.0",
     "axios": "^0.23.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "got": "^11.8.3"
   },
   "devDependencies": {
     "concurrently": "^6.3.0",
