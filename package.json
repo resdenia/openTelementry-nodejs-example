@@ -8,8 +8,8 @@
     "dev": "npm-run-all --parallel devA devB",
     "initA": "cd nodejsSampleA && npm install",
     "initB": "cd nodejsSampleB && npm install",
-    "initApp": "npm install",
-    "initAll": "npm-run-all --parallel initApp initA initB",
+  
+    "initAll": "npm-run-all --parallel initA initB",
     "devB": "node --require './nodejsSampleB/tracer.js' ./nodejsSampleB/index.js",
     "devA": "node --require './nodejsSampleA/tracer.js' ./nodejsSampleA/index.js",
     "startTracer": " node --require './nodejsSampleA/tracer.js' ./nodejsSampleA/index.js"
