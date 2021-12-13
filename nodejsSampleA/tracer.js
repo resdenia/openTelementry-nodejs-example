@@ -23,7 +23,7 @@ const provider = new BasicTracerProvider({
 	}),
 });
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
-provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
+// provider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
 provider.register();
 const sdk = new opentelemetry.NodeSDK({
 	traceExporter: new opentelemetry.tracing.ConsoleSpanExporter(),
