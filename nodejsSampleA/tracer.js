@@ -19,8 +19,7 @@ const exporter = new CollectorTraceExporter({});
 
 const provider = new BasicTracerProvider({
 	resource: new Resource({
-		[SemanticResourceAttributes.SERVICE_NAME]:
-			"logzio-collector-exporter-node-app-a",
+		[SemanticResourceAttributes.SERVICE_NAME]: "service-a",
 	}),
 });
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
